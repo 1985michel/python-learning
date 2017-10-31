@@ -37,6 +37,15 @@ from difflib import SequenceMatcher
 def compareTwoStrings(a,b):
 	return SequenceMatcher(None, a,b).ratio()
 
+def organize_meanings_to_print(list):
+	result = ""
+	n = 1
+	for i in list:
+		#result+=i+"\n"
+		result+= "{} - {} \n".format(n,i)#novo método de formatação de strings!!!! Top!
+		n+=1
+	return result
+
 
 
 #print(translate("meal"))
@@ -64,7 +73,7 @@ def bestMatch(word):
 #print(dir(dict))
 
 #print(translate("maria"))
-print(translate(input("What word do you want to define? ")))
+print(organize_meanings_to_print(translate(input("What word do you want to define? "))))
 
-print(translate)
+
 exit()
